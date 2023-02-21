@@ -1,0 +1,138 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  
+  .navbar-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+  .navbar-toggler:focus {
+    outline: none;
+  }
+  
+  .navbar-toggler-icon {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+  
+  .navbar-nav.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-item {
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background-color: transparent;
+    }
+  
+    .nav-item {
+      margin: 0;
+      padding: 0 1rem;
+    }
+  }
+  
+
+  /* Estilos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    header nav ul {
+      flex-direction: column;
+    }
+    
+    header nav li {
+      margin: 5px 0;
+    }
+    
+    .container {
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 24px;
+    }
+  }
+  
+  /* Estilos para pantallas medianas */
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    header nav ul {
+      justify-content: center;
+    }
+    
+    header nav li {
+      margin: 0 20px;
+    }
+    
+    .container {
+      padding: 50px;
+    }
+    
+    h1 {
+      font-size: 36px;
+    }
+  }
+  
+  /* Estilos para pantallas grandes */
+  @media screen and (min-width: 769px) {
+    header nav ul {
+      justify-content: flex-end;
+    }
+    
+    header nav li {
+      margin: 0 30px;
+    }
+    
+    .container {
+      padding: 100px;
+    }
+    
+    h1 {
+      font-size: 48px;
+    }
+  }
+  
